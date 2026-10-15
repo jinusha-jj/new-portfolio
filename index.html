@@ -1,223 +1,211 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07091d">
-  <meta name="description" content="Jinusha J J — DevOps Engineer and AWS Cloud enthusiast portfolio.">
   <title>Jinusha J J | DevOps Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="scroll-progress" id="scrollProgress"></div>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Jinusha home">
-      <span class="brand-name">Jinusha J J</span>
-      <span class="brand-role">DevOps Engineer</span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-    <nav class="nav-links" id="navLinks">
-      <a class="active" href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#aws">AWS Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="header-actions">
-      <a class="icon-link" href="https://www.linkedin.com/in/jinusha-238w" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-      <a class="icon-link github-mark" href="https://github.com/jinusha-jj" target="_blank" rel="noopener noreferrer" aria-label="GitHub">⌘</a>
-      <a class="button button-small button-outline" href="resume.pdf" download>↓ Resume</a>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header>
+  <a class="brand" href="#home">
+    <strong>Jinusha J J</strong>
+    <span>AWS CLOUD & DEVOPS</span>
+  </a>
+
+  <button id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+  <nav id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#services">AWS Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero section" id="home">
+    <div class="hero-text">
+      <p class="eyebrow">✦ WELCOME TO MY PORTFOLIO</p>
+      <h1>Hi, I'm <span>Jinusha J J</span></h1>
+      <h2>Aspiring <span class="gradient">DevOps Engineer</span></h2>
+      <p class="description">
+        Passionate about AWS Cloud Computing, DevOps tools, automation
+        and building reliable cloud infrastructure. I'm continuously
+        learning and developing my technical skills.
+      </p>
+
+      <div class="buttons">
+        <a class="btn primary" href="#projects">Explore My Work ↗</a>
+        <a class="btn secondary" href="#contact">Contact Me</a>
+      </div>
+
+      <div class="socials">
+        <a href="https://github.com/jinusha-jj" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/jinusha-238w" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="mailto:jinusha1923@gmail.com">Email ↗</a>
+      </div>
     </div>
-  </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero section-wrap" id="home">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="status-dot"></span> HELLO, I'M</p>
-        <h1>Jinusha <span>J J</span></h1>
-        <h2>I am a <span class="gradient-text">DevOps Engineer</span></h2>
-        <p class="hero-description">Passionate about building scalable, secure and highly available cloud infrastructure. I enjoy automating processes, solving real-world problems, and learning new technologies every day.</p>
-        <div class="hero-buttons">
-          <a class="button button-primary" href="resume.pdf" download>⇩ Download Resume <span>→</span></a>
-          <a class="button button-outline" href="#contact">✉ Get in Touch</a>
+    <div class="hero-art" aria-label="Cloud engineer illustration">
+      <div class="orbit"></div>
+      <div class="cloud"><b>AWS</b><small>☁</small></div>
+      <div class="float-card ec2">▣ EC2</div>
+      <div class="float-card s3">◈ S3</div>
+      <div class="float-card iam">◇ IAM</div>
+      <div class="float-card vpc">⬡ VPC</div>
+      <div class="float-card lambda">λ Lambda</div>
+
+      <div class="girl">
+        <div class="hair"></div>
+        <div class="face"><i></i><i></i></div>
+        <div class="body"></div>
+        <div class="laptop"><span>$_</span><hr><hr><hr></div>
+      </div>
+      <p class="art-caption">BUILD · AUTOMATE · DEPLOY</p>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-title">
+      <p>GET TO KNOW ME</p>
+      <h2>About <span>Me</span></h2>
+    </div>
+
+    <div class="about-grid">
+      <article class="panel">
+        <h3>My Journey</h3>
+        <p>
+          I'm an aspiring DevOps Engineer with a Computer Science background.
+          I'm learning cloud technologies, Linux, networking, version control
+          and deployment practices. My goal is to build practical skills and
+          start my career in the IT industry.
+        </p>
+
+        <h3 class="subheading">Education</h3>
+        <p><strong>B.Sc. Computer Science</strong></p>
+        <p>St. Alphonsa College of Arts and Science</p>
+        <p class="muted">2023 – 2026 · Nagercoil, Tamil Nadu</p>
+      </article>
+
+      <article class="panel highlight-panel">
+        <p class="mini-label">CAREER FOCUS</p>
+        <h3>Cloud & DevOps</h3>
+        <p>Learning to deploy, monitor and maintain cloud applications.</p>
+        <div class="tags">
+          <span>AWS Cloud</span><span>Linux</span>
+          <span>Git</span><span>CI/CD</span>
+          <span>Networking</span><span>Automation</span>
         </div>
-        <div class="social-row">
-          <a href="https://www.linkedin.com/in/jinusha-238w" target="_blank" rel="noopener noreferrer"><span class="social-icon linkedin">in</span> LinkedIn</a>
-          <a href="https://github.com/jinusha-jj" target="_blank" rel="noopener noreferrer"><span class="social-icon">⌘</span> GitHub</a>
-          <a href="mailto:jinusha1923@gmail.com"><span class="social-icon">✉</span> jinusha1923@gmail.com</a>
-        </div>
-      </div>
+      </article>
+    </div>
+  </section>
 
-      <div class="hero-art reveal" aria-label="Decorative cloud infrastructure illustration">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="star star-a">✦</div><div class="star star-b">✧</div><div class="star star-c">✦</div>
-        <div class="cloud cloud-main"><span class="aws-word">aws</span><span class="aws-smile"></span></div>
-        <div class="service-float float-ec2"><b>▤</b><span>EC2</span></div>
-        <div class="service-float float-s3"><b>◈</b><span>S3</span></div>
-        <div class="service-float float-iam"><b>⬡</b><span>IAM</span></div>
-        <div class="service-float float-vpc"><b>⌘</b><span>VPC</span></div>
-        <div class="service-float float-lambda"><b>λ</b><span>Lambda</span></div>
-        <div class="service-float float-watch"><b>◉</b><span>CloudWatch</span></div>
-        <div class="server-stack"><i></i><i></i><i></i><i></i><i></i><span class="server-light"></span></div>
-        <div class="cloud cloud-bottom"></div>
-        <div class="developer">
-          <div class="hair"></div><div class="head"><span class="face-fringe"></span></div>
-          <div class="neck"></div><div class="hoodie"></div><div class="arm arm-left"></div><div class="arm arm-right"></div>
-          <div class="laptop"><div class="laptop-screen"><span>⌘</span><i></i><i></i><i></i></div><div class="laptop-base"></div></div>
-        </div>
-        <div class="art-note">Automate<br>Deploy<br>Scale<br><span>Repeat ♡</span></div>
-        <div class="art-caption"><span class="tiny-pulse"></span> BUILDING IN THE CLOUD</div>
-      </div>
-    </section>
+  <section class="section" id="skills">
+    <div class="section-title">
+      <p>WHAT I'M LEARNING</p>
+      <h2>Technical <span>Skills</span></h2>
+    </div>
 
-    <!-- ABOUT -->
-    <section class="section section-wrap" id="about">
-      <div class="section-heading reveal">
-        <p class="eyebrow">A LITTLE ABOUT ME</p>
-        <h2>Curious mind. <span class="gradient-text">Cloud-focused.</span></h2>
-        <p>My journey into cloud technology is powered by curiosity, consistency, and a willingness to learn.</p>
-      </div>
-      <div class="about-grid">
-        <div class="about-visual glass-panel reveal">
-          <div class="sun"></div><div class="sea sea-one"></div><div class="sea sea-two"></div>
-          <div class="shore-person"><span></span></div>
-          <p>Better things<br>are ahead <b>♡</b></p>
-          <div class="visual-label">DREAM · LEARN · BUILD</div>
-        </div>
-        <div class="about-copy reveal">
-          <h3><span class="heading-icon">✦</span> About Me</h3>
-          <p>I'm Jinusha J J, a B.Sc. Computer Science graduate from St. Alphonsa College of Arts and Science. I'm currently learning AWS and DevOps tools to build my career in cloud and infrastructure.</p>
-          <p>I enjoy exploring new technologies, solving problems, and creating practical projects that help me grow as an engineer.</p>
-          <div class="detail-line"><span>⌂</span><div><strong>Education</strong><small>B.Sc. Computer Science · 2023–2026</small><small>St. Alphonsa College of Arts and Science</small></div></div>
-          <div class="detail-line"><span>⌖</span><div><strong>Location</strong><small>Nagercoil, Tamil Nadu, India</small></div></div>
-          <div class="detail-line"><span>↗</span><div><strong>Current focus</strong><small>AWS Cloud · Linux · CI/CD · Infrastructure Automation</small></div></div>
-        </div>
-        <div class="learning-panel glass-panel reveal">
-          <h3><span class="heading-icon">☁</span> Currently Learning</h3>
-          <ul>
-            <li>AWS Cloud Services & Infrastructure</li>
-            <li>DevOps tools: Docker and Jenkins</li>
-            <li>Linux administration & shell scripting</li>
-            <li>CI/CD pipelines and Git workflows</li>
-            <li>Infrastructure as Code with Terraform</li>
-          </ul>
-          <span class="handwritten">Still learning ♡</span>
-        </div>
-      </div>
-    </section>
+    <div class="card-grid">
+      <article class="panel skill-card"><div class="symbol">☁</div><h3>AWS Cloud</h3><p>Cloud infrastructure, compute, storage and networking fundamentals.</p></article>
+      <article class="panel skill-card"><div class="symbol">⌘</div><h3>Linux</h3><p>Linux commands, files, permissions and basic server management.</p></article>
+      <article class="panel skill-card"><div class="symbol">⑂</div><h3>Git & GitHub</h3><p>Version control, repositories, commits and code collaboration.</p></article>
+      <article class="panel skill-card"><div class="symbol">⚙</div><h3>DevOps</h3><p>CI/CD concepts, deployment workflows and automation fundamentals.</p></article>
+      <article class="panel skill-card"><div class="symbol">▤</div><h3>Networking</h3><p>IP addresses, DNS, VPC, routing and security group basics.</p></article>
+      <article class="panel skill-card"><div class="symbol">⌨</div><h3>Scripting</h3><p>Developing command-line and scripting knowledge for automation.</p></article>
+    </div>
+  </section>
 
-    <!-- SKILLS -->
-    <section class="section section-wrap" id="skills">
-      <div class="section-heading reveal">
-        <p class="eyebrow">MY TOOLKIT</p>
-        <h2>Skills that help me <span class="gradient-text">build & automate.</span></h2>
-        <p>Technologies I'm learning and using in hands-on practice.</p>
-      </div>
-      <div class="skill-grid">
-        <article class="skill-card reveal"><span class="skill-symbol">aws</span><h3>AWS</h3><p>Cloud infrastructure</p></article>
-        <article class="skill-card reveal"><span class="skill-symbol">♙</span><h3>Linux</h3><p>Commands & administration</p></article>
-        <article class="skill-card reveal"><span class="skill-symbol">▦</span><h3>Docker</h3><p>Containers</p></article>
-        <article class="skill-card reveal"><span class="skill-symbol">∞</span><h3>Kubernetes</h3><p>Container orchestration</p></article>
-        <article class="skill-card reveal"><span class="skill-symbol">J</span><h3>Jenkins</h3><p>Build automation</p></article>
-        <article class="skill-card reveal"><span class="skill-symbol">⬡</span><h3>Terraform</h3><p>Infrastructure as Code</p></article>
-        <article class="skill-card reveal"><span class="skill-symbol">⌘</span><h3>Git & GitHub</h3><p>Version control</p></article>
-        <article class="skill-card reveal"><span class="skill-symbol">⌁</span><h3>Networking</h3><p>VPC, DNS, routing</p></article>
-        <article class="skill-card reveal"><span class="skill-symbol">$_</span><h3>Shell Scripting</h3><p>Command-line automation</p></article>
-        <article class="skill-card reveal"><span class="skill-symbol">◉</span><h3>Monitoring</h3><p>Logs, metrics & alerts</p></article>
-        <article class="skill-card reveal"><span class="skill-symbol">⛨</span><h3>Security</h3><p>IAM & access control</p></article>
-        <article class="skill-card reveal"><span class="skill-symbol">⇄</span><h3>CI/CD</h3><p>Delivery pipelines</p></article>
-      </div>
-    </section>
+  <section class="section" id="services">
+    <div class="section-title">
+      <p>MY CLOUD TOOLKIT</p>
+      <h2>AWS <span>Services</span></h2>
+      <p>Core AWS services I'm learning and practising.</p>
+    </div>
 
-    <!-- AWS -->
-    <section class="section section-wrap" id="aws">
-      <div class="section-heading reveal">
-        <p class="eyebrow">CLOUD TOOLBOX</p>
-        <h2>AWS services I <span class="gradient-text">work with.</span></h2>
-        <p>Exploring core AWS services for deploying, securing, and monitoring applications.</p>
-      </div>
-      <div class="aws-layout">
-        <div class="aws-cloud-card glass-panel reveal">
-          <div class="aws-card-top"><span class="aws-mini">aws</span><span class="live-label"><i></i> CLOUD TOOLBOX</span></div>
-          <div class="aws-service-grid">
-            <div><b>▤</b><span>EC2</span></div><div><b>◈</b><span>S3</span></div><div><b>▣</b><span>RDS</span></div><div><b>⛨</b><span>IAM</span></div>
-            <div><b>⬡</b><span>VPC</span></div><div><b>◉</b><span>CloudWatch</span></div><div><b>⌖</b><span>Route 53</span></div><div><b>☁</b><span>CloudFront</span></div>
-            <div><b>⇄</b><span>Load Balancer</span></div><div><b>↗</b><span>Auto Scaling</span></div><div><b>✉</b><span>SNS</span></div><div><b>⌘</b><span>SQS</span></div>
-            <div><b>λ</b><span>Lambda</span></div><div><b>▦</b><span>DynamoDB</span></div><div><b>⬡</b><span>ECS</span></div><div><b>◉</b><span>EKS</span></div>
-            <div><b>⛨</b><span>KMS</span></div><div><b>☷</b><span>CloudTrail</span></div><div><b>↻</b><span>EventBridge</span></div><div><b>▣</b><span>Certificate Manager</span></div>
-            <div><b>⌁</b><span>Elastic IP</span></div><div><b>◉</b><span>Service Quotas</span></div><div><b>⚙</b><span>Systems Manager</span></div><div><b>♧</b><span>Amplify</span></div>
-          </div>
-        </div>
-        <aside class="aws-note reveal">
-          <span class="note-icon">✧</span>
-          <h3>Learn by doing.</h3>
-          <p>Hands-on practice helps me understand how cloud services work together in real deployment workflows.</p>
-          <div class="mini-terminal"><div class="terminal-head"><i></i><i></i><i></i><span>cloud-terminal</span></div><code><span>$</span> aws configure<br><span>$</span> terraform plan<br><span class="terminal-success">✓ Infrastructure practice in progress</span></code></div>
-        </aside>
-      </div>
-    </section>
+    <div class="service-grid">
+      <article class="panel service-card"><span>01</span><h3>Amazon EC2</h3><p>Virtual servers for running applications.</p></article>
+      <article class="panel service-card"><span>02</span><h3>Amazon S3</h3><p>Scalable object storage for files and static content.</p></article>
+      <article class="panel service-card"><span>03</span><h3>AWS IAM</h3><p>Manage identities, roles and permissions.</p></article>
+      <article class="panel service-card"><span>04</span><h3>Amazon VPC</h3><p>Build isolated virtual networks in AWS.</p></article>
+      <article class="panel service-card"><span>05</span><h3>Amazon RDS</h3><p>Managed relational database service.</p></article>
+      <article class="panel service-card"><span>06</span><h3>CloudWatch</h3><p>Monitor metrics, logs and alarms.</p></article>
+      <article class="panel service-card"><span>07</span><h3>Load Balancer</h3><p>Distribute incoming traffic across targets.</p></article>
+      <article class="panel service-card"><span>08</span><h3>Auto Scaling</h3><p>Adjust compute capacity based on demand.</p></article>
+      <article class="panel service-card"><span>09</span><h3>CloudFront</h3><p>Deliver content through a global CDN.</p></article>
+      <article class="panel service-card"><span>10</span><h3>Route 53</h3><p>DNS and domain-routing service.</p></article>
+      <article class="panel service-card"><span>11</span><h3>AWS Lambda</h3><p>Run code without managing servers.</p></article>
+      <article class="panel service-card"><span>12</span><h3>CloudTrail</h3><p>Record account activity for auditing.</p></article>
+    </div>
+  </section>
 
-    <!-- PROJECTS -->
-    <section class="section section-wrap" id="projects">
-      <div class="section-heading reveal">
-        <p class="eyebrow">MAKING IDEAS REAL</p>
-        <h2>Featured <span class="gradient-text">projects.</span></h2>
-        <p>Practice projects that demonstrate my growing cloud and DevOps skills.</p>
-      </div>
-      <div class="project-grid">
-        <article class="project-card reveal">
-          <div class="project-icon">☁</div><div class="project-tag">AWS · HOSTING</div>
-          <h3>Static Website on AWS</h3>
-          <p>Host a static website using Amazon S3, CloudFront and Route 53, with HTTPS through AWS Certificate Manager.</p>
-          <div class="tag-row"><span>S3</span><span>CloudFront</span><span>Route 53</span></div>
-          <a href="https://github.com/jinusha-jj" target="_blank" rel="noopener noreferrer">Explore on GitHub <span>↗</span></a>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-icon">⌘</div><div class="project-tag">DEVOPS · CI/CD</div>
-          <h3>CI/CD Pipeline</h3>
-          <p>Practice an automated build and deployment workflow using Git, GitHub, Jenkins and Docker on an EC2 instance.</p>
-          <div class="tag-row"><span>Git</span><span>Jenkins</span><span>Docker</span></div>
-          <a href="https://github.com/jinusha-jj" target="_blank" rel="noopener noreferrer">Explore on GitHub <span>↗</span></a>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-icon">♧</div><div class="project-tag">AWS · MONITORING</div>
-          <h3>Monitoring & Alerts</h3>
-          <p>Configure CloudWatch metrics and alarms with SNS notifications to practice monitoring cloud resource health.</p>
-          <div class="tag-row"><span>CloudWatch</span><span>SNS</span><span>EC2</span></div>
-          <a href="https://github.com/jinusha-jj" target="_blank" rel="noopener noreferrer">Explore on GitHub <span>↗</span></a>
-        </article>
-      </div>
-      <p class="project-note">Project descriptions are learning-project examples. Replace the GitHub links with each project's repository when it is published.</p>
-    </section>
+  <section class="section" id="projects">
+    <div class="section-title">
+      <p>MY PRACTICE WORK</p>
+      <h2>Learning <span>Projects</span></h2>
+    </div>
 
-    <!-- CONTACT -->
-    <section class="section section-wrap contact-section" id="contact">
-      <div class="contact-glow"></div>
-      <div class="section-heading reveal">
-        <p class="eyebrow">LET'S CONNECT</p>
-        <h2>Have an opportunity? <span class="gradient-text">Let's talk.</span></h2>
-        <p>I'm excited to keep learning, collaborate, and begin my career in cloud and DevOps.</p>
-      </div>
-      <div class="contact-grid reveal">
-        <a class="contact-card" href="mailto:jinusha1923@gmail.com"><span>✉</span><small>Email me</small><strong>jinusha1923@gmail.com</strong><b>↗</b></a>
-        <a class="contact-card" href="https://www.linkedin.com/in/jinusha-238w" target="_blank" rel="noopener noreferrer"><span class="linkedin">in</span><small>Connect with me</small><strong>LinkedIn Profile</strong><b>↗</b></a>
-        <a class="contact-card" href="https://github.com/jinusha-jj" target="_blank" rel="noopener noreferrer"><span>⌘</span><small>Explore my code</small><strong>GitHub Profile</strong><b>↗</b></a>
-      </div>
-      <a class="button button-primary resume-bottom reveal" href="resume.pdf" download>⇩ Download Resume <span>→</span></a>
-    </section>
-  </main>
+    <div class="project-grid">
+      <article class="panel project-card">
+        <p class="project-no">PROJECT 01</p>
+        <h3>Static Website Hosting</h3>
+        <p>Learning to host website files using cloud storage and configure website access.</p>
+        <div class="tags"><span>AWS S3</span><span>HTML</span><span>CSS</span></div>
+      </article>
 
-  <footer class="site-footer">
-    <a class="footer-brand" href="#home">Jinusha J J <span>♡</span></a>
-    <p>Cloud <span>×</span> DevOps <span>×</span> A Better Tomorrow</p>
-    <small>© <span id="year"></span> Jinusha J J. Built with curiosity and coffee.</small>
-    <a class="back-top" href="#home" aria-label="Back to top">↑</a>
-  </footer>
-  <script src="script.js"></script>
+      <article class="panel project-card">
+        <p class="project-no">PROJECT 02</p>
+        <h3>EC2 Web Server</h3>
+        <p>Practising virtual server setup, security groups and web application deployment.</p>
+        <div class="tags"><span>EC2</span><span>Linux</span><span>Networking</span></div>
+      </article>
+
+      <article class="panel project-card">
+        <p class="project-no">PROJECT 03</p>
+        <h3>CI/CD Learning Workflow</h3>
+        <p>Exploring source control and the stages involved in automated build and deployment.</p>
+        <div class="tags"><span>Git</span><span>GitHub</span><span>CI/CD</span></div>
+      </article>
+    </div>
+    <p class="project-note">These cards describe learning projects. Update them with your completed work as you build it.</p>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="section-title">
+      <p>LET'S CONNECT</p>
+      <h2>Contact <span>Me</span></h2>
+      <p>I'm looking forward to learning, growing and starting my IT career.</p>
+    </div>
+
+    <div class="contact-panel panel">
+      <div>
+        <p class="mini-label">OPEN TO OPPORTUNITIES</p>
+        <h3>Let's build something great.</h3>
+        <p>Reach out through email or connect with me on my professional profiles.</p>
+        <a class="btn primary" href="mailto:jinusha1923@gmail.com">Send an Email ↗</a>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:jinusha1923@gmail.com"><span>Email</span>jinusha1923@gmail.com</a>
+        <a href="https://github.com/jinusha-jj" target="_blank" rel="noopener noreferrer"><span>GitHub</span>github.com/jinusha-jj ↗</a>
+        <a href="https://www.linkedin.com/in/jinusha-238w" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span>linkedin.com/in/jinusha-238w ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Jinusha J J · Designed with 💜 and a cloud mindset.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
+```
+
