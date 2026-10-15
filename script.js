@@ -1,171 +1,85 @@
 ```javascript
-// ========================================
-// JINUSHA J J — DEVOPS PORTFOLIO
-// ========================================
+document.addEventListener("DOMContentLoaded", () => {
+  // Footer year
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 
+  // Mobile navigation menu
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
 
-// 1. UPDATE COPYRIGHT YEAR
-const year = document.getElementById("year");
-
-if (year) {
-    year.textContent = new Date().getFullYear();
-}
-
-
-// 2. MOBILE NAVIGATION MENU
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-
-if (menuToggle && navLinks) {
-
-    menuToggle.addEventListener("click", function () {
-
-        const isOpen = navLinks.classList.toggle("open");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-        );
-
-        menuToggle.textContent = isOpen ? "✕" : "☰";
-
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "✕" : "☰";
     });
 
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+  }
 
-    // Close menu after clicking a navigation link
-    navLinks.querySelectorAll("a").forEach(function (link) {
+  // Scroll progress bar
+  const progress = document.getElementById("scrollProgress");
 
-        link.addEventListener("click", function () {
+  function updateProgress() {
+    if (!progress) return;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+    progress.style.width = `${percent}%`;
+  }
 
-            navLinks.classList.remove("open");
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  updateProgress();
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
+  // Reveal animation
+  const revealItems = document.querySelectorAll(
+    ".hero-text, .hero-art, .section-title, .panel"
+  );
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach(item => {
+      item.classList.add("reveal");
+      observer.observe(item);
+    });
+  } else {
+    revealItems.forEach(item => item.classList.add("visible"));
+  }
+
+  // Highlight the current section in navigation
+  const sections = document.querySelectorAll("main section[id]");
+  const links = document.querySelectorAll("#navLinks a");
+
+  if ("IntersectionObserver" in window) {
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(link => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") === `#${entry.target.id}`
             );
-
-            menuToggle.textContent = "☰";
-
-        });
-
-    });
-
-}
-
-
-// 3. SCROLL PROGRESS BAR
-const scrollProgress = document.getElementById("scrollProgress");
-
-function updateScrollProgress() {
-
-    if (!scrollProgress) return;
-
-    const scrollableHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-
-    let progress = 0;
-
-    if (scrollableHeight > 0) {
-        progress = (window.scrollY / scrollableHeight) * 100;
-    }
-
-    scrollProgress.style.width =
-        Math.min(100, Math.max(0, progress)) + "%";
-
-}
-
-window.addEventListener(
-    "scroll",
-    updateScrollProgress,
-    { passive: true }
-);
-
-updateScrollProgress();
-
-
-// 4. SCROLL REVEAL ANIMATIONS
-const revealElements = document.querySelectorAll(".reveal");
-
-if ("IntersectionObserver" in window) {
-
-    const revealObserver = new IntersectionObserver(
-        function (entries, observer) {
-
-            entries.forEach(function (entry) {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("visible");
-
-                    observer.unobserve(entry.target);
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.12
+          });
         }
-    );
+      });
+    }, { rootMargin: "-35% 0px -55% 0px" });
 
-    revealElements.forEach(function (element) {
-
-        revealObserver.observe(element);
-
-    });
-
-} else {
-
-    // Fallback for older browsers
-    revealElements.forEach(function (element) {
-
-        element.classList.add("visible");
-
-    });
-
-}
-
-
-// 5. ACTIVE NAVIGATION LINK
-const sections = document.querySelectorAll("main section[id]");
-const navigationItems = document.querySelectorAll(".nav-links a");
-
-if ("IntersectionObserver" in window) {
-
-    const sectionObserver = new IntersectionObserver(
-        function (entries) {
-
-            entries.forEach(function (entry) {
-
-                if (entry.isIntersecting) {
-
-                    navigationItems.forEach(function (link) {
-
-                        const targetSection = link.getAttribute("href");
-
-                        link.classList.toggle(
-                            "active",
-                            targetSection === "#" + entry.target.id
-                        );
-
-                    });
-
-                }
-
-            });
-
-        },
-        {
-            rootMargin: "-30% 0px -60% 0px"
-        }
-    );
-
-    sections.forEach(function (section) {
-
-        sectionObserver.observe(section);
-
-    });
-
-}
+    sections.forEach(section => sectionObserver.observe(section));
+  }
+});
 ```
+
